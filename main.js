@@ -36,3 +36,35 @@ const juanita = new Student(
 // // Hacer que Natalia apruebe otro curso
 
 // natalia.cursosAprobados.push("Curso de Responsive Desing");
+
+// Prototipos con las sintaxis de clases
+
+class Student2 {
+    constructor({
+        name,
+        age,
+        instagram,
+        twitter,
+        facebook,
+        cursosAprobados = [],
+        email,
+    }) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.cursosAprobados = cursosAprobados;
+    }
+
+    aprobarCurso(nuevoCurso) {
+        this.cursosAprobados.push(nuevoCurso);
+    }
+}
+
+const Miguel = new Student2({
+    name: "Miguel",
+    age: 28,
+    cursosAprobados: [
+        "Curso análisis de Negocios para ciencia de Datos",
+        "Curso de Principios de visualizaciín de Datos para BI",
+    ],
+})
